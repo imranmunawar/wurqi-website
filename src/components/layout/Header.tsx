@@ -96,7 +96,7 @@ export function Header() {
         size="wide"
         className="flex h-[var(--header-height)] items-center justify-between gap-4"
       >
-        <SiteLogo variant="dark" priority />
+        <SiteLogo variant="light" priority />
 
         <nav
           ref={navRef}

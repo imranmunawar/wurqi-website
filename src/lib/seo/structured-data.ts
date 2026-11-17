@@ -20,7 +20,7 @@ export function organizationJsonLd(): JsonLd {
     sameAs: [siteConfig.links.linkedin, siteConfig.links.twitter].filter(
       Boolean,
     ),
-    logo: absoluteUrl(siteConfig.logos.default),
+    logo: absoluteUrl(siteConfig.logos.onLight),
   };
 }
 
@@ -97,7 +97,7 @@ export function articleJsonLd(options: {
       name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
-        url: absoluteUrl("/logo.svg"),
+        url: absoluteUrl(siteConfig.logos.onLight),
       },
     },
     ...(options.image

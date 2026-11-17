@@ -112,7 +112,7 @@ export function MobileNav({
             }}
           >
             <div className="flex h-[var(--header-height)] items-center justify-between border-b border-[var(--border)] px-4">
-              <SiteLogo variant="dark" href="/" />
+              <SiteLogo variant="light" href="/" />
               <button
                 ref={closeRef}
                 type="button"

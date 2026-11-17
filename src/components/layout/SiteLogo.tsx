@@ -25,8 +25,8 @@ export function SiteLogo({
     <Image
       src={src}
       alt={siteConfig.name}
-      width={145}
-      height={40}
+      width={772}
+      height={218}
       priority={priority}
       className="h-8 w-auto md:h-9"
     />
