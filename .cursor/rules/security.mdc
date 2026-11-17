@@ -1,0 +1,14 @@
+---
+description: Security practices for the Wurqi marketing site
+globs: "**/*.{ts,tsx,mjs},next.config.ts,.env*"
+alwaysApply: false
+---
+
+# Security
+
+- Never commit secrets; use `.env.example` as the template only.
+- Keep security headers in `next.config.ts` (CSP, HSTS, frame denial, nosniff).
+- Sanitize/validate all user input with zod before CRM submission.
+- Do not introduce `dangerouslySetInnerHTML` except for trusted JSON-LD serialization.
+- External links: use `rel="noopener noreferrer"` when `target="_blank"`.
+- Avoid loading unneeded third-party scripts; gate analytics behind env flags when wired.

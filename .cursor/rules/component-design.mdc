@@ -1,0 +1,15 @@
+---
+description: Component and visual design rules for Wurqi
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# Component design
+
+- Premium enterprise SaaS look: deep navy/slate + teal accent (`#0F766E` family); light cool backgrounds.
+- No purple themes, no cream/terracotta defaults, no auto dark mode on this marketing site.
+- Use CSS variables from `globals.css`; do not hardcode one-off brand colors in components.
+- Typography: Geist; use `.text-display`, `.text-h1`, etc. for hierarchy.
+- Cards only when they aid interaction/understanding — not by default in heroes.
+- Motion: intentional, 2–3 meaningful motions max per visually led surface; honor reduced motion.
+- Keep sections single-purpose; content comes from `@/content` modules.

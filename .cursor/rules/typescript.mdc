@@ -1,0 +1,14 @@
+---
+description: TypeScript standards for the Wurqi website
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+# TypeScript
+
+- Strict mode is on — no `any`; prefer unknown + narrowing.
+- Export named types from `@/types` for shared domain models.
+- Prefer `as const` for static config objects; derive types with `typeof` when useful.
+- Use zod schemas in `src/lib/validation` for runtime form input; infer types with `z.infer`.
+- Prefer explicit return types on public lib helpers.
+- Avoid default exports except where Next.js requires them (pages, layouts, configs).

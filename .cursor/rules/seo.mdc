@@ -1,0 +1,14 @@
+---
+description: SEO and metadata standards for Wurqi
+globs: src/{app,lib/seo,config/seo,content}/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# SEO
+
+- Every indexable page needs unique title + description via centralized SEO helpers.
+- Emit JSON-LD with builders in `@/lib/seo/structured-data` (Organization, WebSite, SoftwareApplication, Article, BreadcrumbList, FAQPage).
+- Canonical URLs must use `siteConfig.url` / `NEXT_PUBLIC_SITE_URL`.
+- Landing pages are content-configured in `src/content/landing/pages.ts`.
+- Mark sample/illustrative content clearly (`isSample`, `isIllustrative`) — never present placeholders as real customers.
+- Prefer crawlable HTML; do not hide primary copy behind client-only rendering.

@@ -1,0 +1,14 @@
+---
+description: Next.js App Router conventions for Wurqi
+globs: src/app/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next.js
+
+- This project uses Next.js 16 — read `node_modules/next/dist/docs/` before assuming APIs.
+- Use the App Router under `src/app`; colocate route `page.tsx`, `layout.tsx`, `loading.tsx` as needed.
+- Build metadata with `createPageMetadata` / `buildMetadata` — do not hand-roll Open Graph repeatedly.
+- Prefer static generation for marketing pages; use dynamic only when required.
+- `output: "standalone"` is configured for Docker — keep that intact.
+- Images: use `next/image` with configured `remotePatterns`.

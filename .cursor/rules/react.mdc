@@ -1,0 +1,14 @@
+---
+description: React 19 patterns for Wurqi marketing UI
+globs: **/*.{tsx,jsx}
+alwaysApply: false
+---
+
+# React
+
+- Server Components by default; add `"use client"` only for interactivity.
+- Prefer modern React 19 patterns already used by the team; do not add `useMemo`/`useCallback` by default.
+- Keep components focused; extract presentational pieces when props explode.
+- Use `cn()` from `@/lib/utils` for className composition.
+- Forms: validate with zod schemas from `@/lib/validation/forms`.
+- Do not fetch CRM/analytics directly in components — call `@/lib/crm` and `@/lib/analytics`.

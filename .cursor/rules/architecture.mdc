@@ -1,0 +1,14 @@
+---
+description: Wurqi marketing site architecture — content-driven, KISS, DRY
+alwaysApply: true
+---
+
+# Architecture
+
+- Content-driven: page copy and IA live in `src/content/**` and `src/config/**`; UI consumes typed data.
+- Keep layers separate: `config` → `content`/`lib` → `components` → `app` routes.
+- Prefer composition over inheritance; one concern per module.
+- Do not invent dollar prices — use `Custom` / sales CTAs from `src/config/pricing.ts`.
+- No page UI scaffolding unless asked; extend existing patterns.
+- Shared types belong in `src/types`; avoid duplicating interfaces in content files.
+- Integrations/CRM/analytics are pluggable stubs in `src/lib/**` — register providers, do not hardcode vendors in UI.

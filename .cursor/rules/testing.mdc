@@ -1,0 +1,14 @@
+---
+description: Testing conventions for Wurqi website
+globs: "**/*.{test,spec}.{ts,tsx},e2e/**/*,vitest.config.ts,playwright.config.ts"
+alwaysApply: false
+---
+
+# Testing
+
+- Unit/component tests: Vitest + Testing Library under `src/**/*.{test,spec}.{ts,tsx}`.
+- E2E: Playwright in `e2e/` via `npm run test:e2e`.
+- Prefer testing behavior and content contracts over implementation details.
+- Cover validation schemas and pure helpers (SEO builders, pricing helpers) with unit tests.
+- Do not snapshot entire pages by default; assert critical copy/CTA paths.
+- CI should run `typecheck`, `lint`, and `test` before e2e.

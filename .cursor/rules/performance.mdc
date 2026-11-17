@@ -1,0 +1,14 @@
+---
+description: Performance guidance for Wurqi marketing pages
+globs: src/**/*.{ts,tsx,css}
+alwaysApply: false
+---
+
+# Performance
+
+- Prefer Server Components and static content; minimize client JS.
+- Use `next/image` with modern formats; avoid huge unoptimized assets in the hero.
+- Lazy-load below-the-fold motion/heavy media; respect reduced motion.
+- Keep fonts limited to Geist via `next/font` already in the root layout.
+- Avoid layout shift: reserve space for media and async UI.
+- Measure LCP/CLS on key templates before adding decorative effects.

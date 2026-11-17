@@ -1,0 +1,15 @@
+---
+description: Accessibility requirements for Wurqi UI
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# Accessibility
+
+- Semantic HTML first: landmarks, headings in order, labeled form controls.
+- All interactive elements must be keyboard reachable with visible `:focus-visible`.
+- Images need meaningful `alt` (or empty alt for decorative).
+- Do not rely on color alone for status; pair with text/icon.
+- Honor `prefers-reduced-motion` — globals already dampen transitions.
+- Target WCAG 2.2 AA contrast on navy/teal/light surfaces.
+- Mega-menus and dialogs need Escape, focus trap, and aria attributes when implemented.
